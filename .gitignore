@@ -1,0 +1,21 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# PyCharm
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Variáveis de ambiente / chaves
+.env
+
+# Bases de dados locais (se usares SQLite por exemplo)
+*.db
+*.sqlite3
+
+# Sistema
+.DS_Store
