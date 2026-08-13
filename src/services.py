@@ -15,7 +15,6 @@ def obter_tempo(latitude, longitude):
         dados_mar = resposta_mar.json()
         ondas = dados_mar["current"]["wave_height"]
 
-
         return {
             "temperatura" : temperatura,
             "vento" : vento,
