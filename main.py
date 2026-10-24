@@ -1,10 +1,6 @@
-from src.databases import peixes_dic
+from src.databases import peixes_dic, locais_dic
 from src.services import obter_tempo
 
-for peixe in peixes_dic.values():
-    print(f"🐟 {peixe.nome} ({peixe.nome_cientifico}):")
-    print(f"    Tamanho mínimo legal: {peixe.tamanho_minimo_cm} cm")
-    print(f"    Técnica ideal: {peixe.tecnica} \n")
 
 while True:
     print("-- APP DE PESCA --")
@@ -43,19 +39,17 @@ while True:
         case "3":
             # latitude = input("Insira o latitude: ").strip()
             # longitude = input("Insira o longitude: ").strip()
-            latitude = 38.7223
-            longitude = -9.1393
+            local = input("Insira o local: ")
 
-            tempo = obter_tempo(latitude, longitude)
-
-            if tempo:
-                print(f"\n--- Condições Atuais ---")
-                print(f"Temperatura: {tempo['temperatura']} °C")
-                print(f"Vento: {tempo['vento']} km/h")
-                print(f"Ondulação: {tempo['ondas']} m")
+            if local not in locais_dic:
+                    print("O local indicado não foi encontrado.")
             else:
-                print("Não foi possível obter os dados do tempo.")
-        case "4":
-            break
-        case _:
-            print("Opção inválida, tenta novamente.")
+                local = locais_dic[local]
+                print(f"\n--- {local.nome} ---")
+                print(f"Latitude: {local.latitude}")
+                print(f"Longitude: {local.longitude}")
+                print(f"Tipo de agua: {local.tipo_de_agua}")
+                print("Peixes comuns: \n")
+                for peixe in local.peixes_comuns:
+                    print(f"Peixe: {peixe.nome}")
+
