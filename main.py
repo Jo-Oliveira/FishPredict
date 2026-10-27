@@ -1,5 +1,5 @@
 from src.databases import peixes_dic, locais_dic
-from src.recomendacao import nota_temperatura
+from src.recomendacao import nota_temperatura, indice, nota_ondulacao, nota_vento
 from src.services import obter_tempo
 from src.models import Condicoes
 
@@ -56,6 +56,18 @@ from src.models import Condicoes
 #                     print(f"Peixe: {peixe.nome}")
 
 condicoes = Condicoes(temperatura_agua=19.0, vento=12.0, ondulacao=1.5)
-print(condicoes)
+# print(condicoes)
+robalo = peixes_dic['robalo']
+print(f"Temperatura: {round(nota_temperatura(robalo, condicoes))}/100")
+print(f"Ondulação: {round(nota_ondulacao(robalo, condicoes))}/100")
+print(f"Vento: {round(nota_vento(robalo, condicoes))}/100")
 
-print(nota_temperatura(peixes_dic["robalo"], condicoes))
+
+condicoes = Condicoes(temperatura_agua=16.0, vento=17.5, ondulacao=1.0)
+# print(condicoes)
+robalo = peixes_dic['robalo']
+print(f"Temperatura: {round(nota_temperatura(robalo, condicoes))}/100")
+print(f"Ondulação: {round(nota_ondulacao(robalo, condicoes))}/100")
+print(f"Vento: {round(nota_vento(robalo, condicoes))}/100")
+
+print(f"Classificação: {round(indice(robalo, condicoes))}%")

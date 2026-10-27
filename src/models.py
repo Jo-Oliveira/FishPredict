@@ -1,6 +1,9 @@
 from dataclasses import dataclass
 class Peixe:
-    def __init__(self, nome: str, nome_cientifico: str, habitat: str, tecnica: str, amostra_ideal: str, tamanho_minimo_cm: float, epoca_pesca: list[int], melhor_hora_dia: list[tuple[int, int]], condicoes_vento_ideais: tuple[float, float], fase_mare_ideal: str, condicoes_ondulacao_ideal: tuple[float, float],tipo_agua: str, profundidade_ideal: float, temperatura_da_agua: tuple[float, float], fase_lunar: str):
+    def __init__(self, nome: str, nome_cientifico: str, habitat: str, tecnica: str, amostra_ideal: str, tamanho_minimo_cm: float,
+                 epoca_pesca: list[int], melhor_hora_dia: list[tuple[int, int]], condicoes_vento_ideais: tuple[float, float],
+                 fase_mare_ideal: str, condicoes_ondulacao_ideal: tuple[float, float],tipo_agua: str, profundidade_ideal: float,
+                 temperatura_da_agua: tuple[float, float], fase_lunar: str):
         self.nome = nome
         self.nome_cientifico = nome_cientifico
         self.habitat = habitat
