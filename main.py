@@ -55,14 +55,6 @@ from src.models import Condicoes
 #                 for peixe in local.peixes_comuns:
 #                     print(f"Peixe: {peixe.nome}")
 
-condicoes = Condicoes(temperatura_agua=19.0, vento=12.0, ondulacao=1.5)
-# print(condicoes)
-robalo = peixes_dic['robalo']
-print(f"Temperatura: {round(nota_temperatura(robalo, condicoes))}/100")
-print(f"Ondulação: {round(nota_ondulacao(robalo, condicoes))}/100")
-print(f"Vento: {round(nota_vento(robalo, condicoes))}/100")
-
-
 condicoes = Condicoes(temperatura_agua=16.0, vento=17.5, ondulacao=1.0)
 # print(condicoes)
 robalo = peixes_dic['robalo']

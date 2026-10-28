@@ -16,7 +16,8 @@ peixes_dic = {
         tipo_agua="Mar aberto / Estuário",
         profundidade_ideal=3.0,
         temperatura_da_agua=(12.0, 20.0),
-        fase_lunar="cheia ou nova"
+        fase_lunar="cheia ou nova",
+        pesos={"temperatura": 0.25, "vento": 0.30, "ondulacao": 0.45}
     ),
     "dourada": Peixe(
         nome="Dourada",
@@ -33,7 +34,8 @@ peixes_dic = {
         tipo_agua="Praia arenosa / Estuário",
         profundidade_ideal=2.0,
         temperatura_da_agua=(14.0, 22.0),
-        fase_lunar="qualquer"
+        fase_lunar="qualquer",
+        pesos={"temperatura": 0.5, "vento": 0.2, "ondulacao": 0.3}
     ),
     "sargo": Peixe(
         nome="Sargo",
@@ -50,7 +52,8 @@ peixes_dic = {
         tipo_agua="Rochoso",
         profundidade_ideal=5.0,
         temperatura_da_agua=(15.0, 22.0),
-        fase_lunar="qualquer"
+        fase_lunar="qualquer",
+        pesos={"temperatura": 0.4, "vento": 0.25, "ondulacao": 0.35}
     ),
     "corvina": Peixe(
         nome="Corvina",
@@ -67,7 +70,8 @@ peixes_dic = {
         tipo_agua="Estuário / Embocadura",
         profundidade_ideal=6.0,
         temperatura_da_agua=(16.0, 23.0),
-        fase_lunar="cheia ou nova"
+        fase_lunar="cheia ou nova",
+        pesos={"temperatura": 0.45, "vento": 0.15, "ondulacao": 0.40}
     ),
     "pargo": Peixe(
         nome="Pargo",
@@ -84,7 +88,8 @@ peixes_dic = {
         tipo_agua="Mar aberto / Rochoso profundo",
         profundidade_ideal=35.0,
         temperatura_da_agua=(16.0, 20.0),
-        fase_lunar="qualquer"
+        fase_lunar="qualquer",
+        pesos={"temperatura": 0.2, "vento": 0.3, "ondulacao": 0.5}
     ),
     "tainha": Peixe(
         nome="Tainha",
@@ -101,7 +106,8 @@ peixes_dic = {
         tipo_agua="Estuário / Porto",
         profundidade_ideal=1.5,
         temperatura_da_agua=(10.0, 18.0),
-        fase_lunar="qualquer"
+        fase_lunar="qualquer",
+        pesos={"temperatura": 0.5, "vento": 0.3, "ondulacao": 0.2}
     ),
     "carapau": Peixe(
         nome="Carapau",
@@ -118,7 +124,8 @@ peixes_dic = {
         tipo_agua="Mar aberto / Porto",
         profundidade_ideal=8.0,
         temperatura_da_agua=(15.0, 22.0),
-        fase_lunar="qualquer"
+        fase_lunar="qualquer",
+        pesos={"temperatura": 0.4, "vento": 0.3, "ondulacao": 0.3}
     ),
     "linguado": Peixe(
         nome="Linguado",
@@ -135,7 +142,8 @@ peixes_dic = {
         tipo_agua="Praia arenosa / Estuário",
         profundidade_ideal=3.0,
         temperatura_da_agua=(10.0, 18.0),
-        fase_lunar="qualquer"
+        fase_lunar="qualquer",
+        pesos={"temperatura": 0.5, "vento": 0.2, "ondulacao": 0.3}
     ),
 }
 
