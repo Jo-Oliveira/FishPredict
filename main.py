@@ -1,8 +1,6 @@
-from src.databases import peixes_dic, locais_dic
-from src.recomendacao import nota_temperatura, indice, nota_ondulacao, nota_vento
-from src.services import obter_tempo
+from src.databases import peixes_dic
 from src.models import Condicoes
-
+from src.recomendacao import indice, nota_ondulacao, nota_temperatura, nota_vento
 
 # while True:
 #     print("-- APP DE PESCA --")

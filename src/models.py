@@ -1,4 +1,7 @@
+import math
 from dataclasses import dataclass
+
+
 class Peixe:
     def __init__(self, nome: str, nome_cientifico: str, habitat: str, tecnica: str, amostra_ideal: str, tamanho_minimo_cm: float,
                  epoca_pesca: list[int], melhor_hora_dia: list[tuple[int, int]], condicoes_vento_ideais: tuple[float, float],
@@ -20,6 +23,9 @@ class Peixe:
         self.temperatura_da_agua = temperatura_da_agua
         self.fase_lunar = fase_lunar
         self.pesos = pesos
+
+        if not math.isclose(sum(pesos.values()), 1.0):
+            raise ValueError("A soma dos pesos tem que dar 1")
 class LocalPesca:
     def __init__(self, nome: str, latitude: float, longitude: float, tipo_de_agua: str, peixes_comuns: list[Peixe]):
         self.nome = nome

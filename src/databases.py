@@ -1,4 +1,4 @@
-from src.models import Peixe, LocalPesca
+from src.models import LocalPesca, Peixe
 
 peixes_dic = {
     "robalo": Peixe(

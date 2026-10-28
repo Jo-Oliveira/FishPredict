@@ -1,5 +1,6 @@
 import requests
 
+
 def obter_tempo(latitude, longitude):
     url_tempo = f"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current_weather=true"
     url_mar = f"https://marine-api.open-meteo.com/v1/marine?latitude={latitude}&longitude={longitude}&current=wave_height"

@@ -1,4 +1,6 @@
-from src.models import Peixe, Condicoes
+from src.models import Condicoes, Peixe
+
+
 def nota(valor: float, minimo: float, maximo: float) -> float:
     """Calcula a nota do peixe.
     Lógica: atribuir um mínimo e máximo (0 a 100),
